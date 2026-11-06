@@ -162,9 +162,18 @@ footer{padding:22px 0 30px;text-align:center;font-size:.88rem;color:var(--ink-so
 @media (min-width:860px){.find .map{aspect-ratio:21/8}}
 
 /* ---------- ulasan ---------- */
-.reviews{padding-block:clamp(8px,3vw,40px)}
-.rev-box{background:var(--blush);border-radius:var(--r);padding:clamp(24px,5vw,56px);display:grid;gap:12px;justify-items:start}
-.rev-box .stars{color:var(--coral);font-size:1.5rem;letter-spacing:.2em;line-height:1}
-.rev-box h2{font-size:clamp(1.7rem,6vw,3rem)}
-.rev-box p{font-size:clamp(1rem,3.4vw,1.2rem);color:var(--ink-soft);max-width:44ch}
-.rev-box .btn{margin-top:8px}
+.reviews{padding-block:clamp(24px,5vw,64px)}
+.reviews h2{font-size:clamp(2rem,7vw,3.4rem);margin-bottom:24px}
+.rev-grid{display:grid;gap:14px}
+.rev{background:var(--blush);border-radius:var(--r);padding:clamp(22px,4vw,36px);display:grid;gap:14px;align-content:start}
+.rev:nth-child(2){background:var(--mist)}
+.rev .stars{color:var(--coral);font-size:1.3rem;letter-spacing:.2em;line-height:1}
+.rev blockquote{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,4.6vw,1.8rem);line-height:1.2;letter-spacing:-.01em}
+.rev figcaption b{display:block;font-size:1.05rem}
+.rev figcaption span{font-size:.9rem;color:var(--ink-soft)}
+.rev-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.rev-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px}
+.rev-more{margin-top:22px}
+@media (min-width:860px){
+  .rev-grid{grid-template-columns:1.25fr .75fr;align-items:start}
+}
