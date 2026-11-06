@@ -121,7 +121,7 @@ footer{padding:22px 0 30px;text-align:center;font-size:.88rem;color:var(--ink-so
   .bar .btn .long{display:inline}
   .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
   .photo .frame{aspect-ratio:1/1.05}
-  .photo .chip{left:20px;bottom:20px}
+  .photo .chip{position:static;margin-top:18px;max-width:none;width:fit-content;box-shadow:0 14px 30px -18px rgba(15,42,51,.6)}
   .bento{grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(190px,auto)}
   .t1{grid-column:span 3;grid-row:span 2}
   .t2{grid-column:span 3}
