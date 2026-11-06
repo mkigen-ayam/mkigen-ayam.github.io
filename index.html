@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261107e">
+<link rel="stylesheet" href="css/style.css?v=20261107f">
 </head>
 <body>
 
@@ -133,23 +133,40 @@
 
   <section class="reviews" id="ulasan">
     <div class="wrap">
-      <h2>Apa kata pelanggan kami</h2>
-      <div class="rev-grid">
-        <figure class="rev">
+      <div class="rev-head">
+        <h2>Apa kata pelanggan kami</h2>
+        <div class="rev-nav" aria-label="Kawalan slider ulasan">
+          <button type="button" class="rev-btn" data-dir="-1" aria-label="Ulasan sebelum">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <button type="button" class="rev-btn" data-dir="1" aria-label="Ulasan seterusnya">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="slider" id="revSlider" role="region" aria-roledescription="carousel" aria-label="Ulasan pelanggan" tabindex="0">
+        <figure class="slide quote q1">
           <div class="stars" aria-hidden="true">★★★★★</div>
           <blockquote>servis terbaik.. smpi depan pintu rumah, brg2 basah sume bersih ! sis puas hati ..!</blockquote>
           <figcaption><b>Cika Ke Tu</b><span>Ulasan Facebook · April 2020</span></figcaption>
-          <div class="rev-photos">
-            <img src="images/review-1.jpg" alt="Ayam yang diterima pelanggan, dibungkus bersih" loading="lazy" width="280" height="373">
-            <img src="images/review-2.jpg" alt="Ikan dan udang yang diterima pelanggan" loading="lazy" width="280" height="373">
-          </div>
         </figure>
-        <figure class="rev">
+        <figure class="slide photo">
+          <img src="images/review-1.jpg" alt="Ayam yang diterima pelanggan, dibungkus bersih" loading="lazy" width="280" height="373">
+          <figcaption><b>Gambar daripada pelanggan</b><span>Cika Ke Tu · April 2020</span></figcaption>
+        </figure>
+        <figure class="slide photo">
+          <img src="images/review-2.jpg" alt="Ikan dan udang yang diterima pelanggan" loading="lazy" width="280" height="373">
+          <figcaption><b>Gambar daripada pelanggan</b><span>Cika Ke Tu · April 2020</span></figcaption>
+        </figure>
+        <figure class="slide quote q2">
           <div class="stars" aria-hidden="true">★★★★★</div>
           <blockquote>service baik dan senang berurusan</blockquote>
           <figcaption><b>Muhammad Syahmi</b><span>Ulasan Facebook · September 2019</span></figcaption>
         </figure>
       </div>
+      <div class="rev-dots" id="revDots" aria-hidden="true"></div>
+
       <a class="btn rev-more" href="https://www.facebook.com/MKIGenerationEnterprise/reviews" target="_blank" rel="noopener">Lihat semua ulasan di Facebook</a>
     </div>
   </section>
@@ -199,6 +216,6 @@
   </a>
 </div>
 
-<script src="js/script.js?v=20261107e" defer></script>
+<script src="js/script.js?v=20261107f" defer></script>
 </body>
 </html>

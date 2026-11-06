@@ -30,4 +30,40 @@
     }, { rootMargin: '-45% 0px -50% 0px' });
     targets.forEach(function (el) { io.observe(el); });
   }
+
+  // 3) Slider ulasan pelanggan (tambah <figure class="slide"> untuk ulasan baru)
+  var slider = document.getElementById('revSlider');
+  var dotsBox = document.getElementById('revDots');
+  if (slider && dotsBox) {
+    var slides = Array.prototype.slice.call(slider.querySelectorAll('.slide'));
+    var btns = document.querySelectorAll('.rev-btn');
+    slides.forEach(function () { dotsBox.appendChild(document.createElement('i')); });
+    var dots = Array.prototype.slice.call(dotsBox.children);
+
+    function step() {
+      return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slider.clientWidth;
+    }
+    function update() {
+      var i = Math.round(slider.scrollLeft / step());
+      i = Math.max(0, Math.min(slides.length - 1, i));
+      dots.forEach(function (d, k) { d.classList.toggle('on', k === i); });
+      var max = slider.scrollWidth - slider.clientWidth - 2;
+      if (btns.length === 2) {
+        btns[0].disabled = slider.scrollLeft <= 2;
+        btns[1].disabled = slider.scrollLeft >= max;
+      }
+    }
+    Array.prototype.forEach.call(btns, function (b) {
+      b.addEventListener('click', function () {
+        slider.scrollBy({ left: step() * Number(b.getAttribute('data-dir')), behavior: 'smooth' });
+      });
+    });
+    slider.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    slider.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { slider.scrollBy({ left: step(), behavior: 'smooth' }); }
+      if (e.key === 'ArrowLeft') { slider.scrollBy({ left: -step(), behavior: 'smooth' }); }
+    });
+    window.addEventListener('resize', update);
+    update();
+  }
 })();
