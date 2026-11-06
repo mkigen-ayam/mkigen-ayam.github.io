@@ -52,7 +52,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-h
 .photo{position:relative}
 .photo .frame{position:relative;border-radius:var(--r);overflow:hidden;background:var(--blush);aspect-ratio:1.05/1;box-shadow:0 30px 60px -30px rgba(15,42,51,.5)}
 .photo img{width:100%;height:100%;object-fit:cover}
-.photo .chip{position:absolute;left:14px;bottom:-22px;display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--white);padding:12px 20px 12px 14px;border-radius:20px;box-shadow:0 18px 40px -16px rgba(15,42,51,.7)}
+.photo .chip{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px);display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--white);padding:12px 20px 12px 14px;border-radius:20px;box-shadow:0 18px 40px -16px rgba(15,42,51,.7)}
 .photo .chip .tr{width:44px;height:44px;border-radius:14px;background:var(--coral);display:grid;place-items:center;flex:none}
 .photo .chip .tr svg{width:26px;height:26px}
 .photo .chip strong{display:block;font-family:var(--display);font-size:1.05rem;line-height:1.1}
@@ -121,7 +121,7 @@ footer{padding:22px 0 30px;text-align:center;font-size:.88rem;color:var(--ink-so
   .bar .btn .long{display:inline}
   .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
   .photo .frame{aspect-ratio:1/1.05}
-  .photo .chip{left:-30px;bottom:34px}
+  .photo .chip{left:20px;bottom:20px}
   .bento{grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(190px,auto)}
   .t1{grid-column:span 3;grid-row:span 2}
   .t2{grid-column:span 3}
